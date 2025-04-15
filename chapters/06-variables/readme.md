@@ -30,8 +30,10 @@ set(varName value... CACHE BOOL "docstring" [FORCE])
 ```
 `BOOL` is an example of `type`. Other types can be `FILEPATH`, `PATH`,
 `STRING`, `INTERNAL`.
-All these type are only used for external tools, as in cmake they are all just
-strings. `BOOL` are often `ON/OFF`, `TRUE/FALSE`, `1/0`, etc.
+By default, already set cache variables are not overwritten. Adding `FORCE` is
+necessary to overwrite a set cache variable.
+All types are only used by external tools; cmake knows only strings.
+`BOOL` are often `ON/OFF`, `TRUE/FALSE`, `1/0`, etc.
 
 `option` was born out of the common need for cache variable of type `BOOL`
 ```cmake
