@@ -68,3 +68,22 @@ cmake_language(
     CALL message "End of top level processing"
 )
 ```
+
+## Function arguments
+Spaces and semicolons separate arguments. So if there are many space there are
+many arguments. The two lines below have the same effect
+```cmake
+someCommand(a   b c)
+someCommand(a;;;b;c)
+```
+Quoting escapes spaces and semicolons
+```cmake
+someCommand(a "b;c")  # only two arguments
+```
+CMake's ultimate programming language prperty #5123: "Spaces only act as
+argument separators before any variable evaluation is performed."
+
+Quote variable expansion should you wish to pass it as a single argument.
+
+## Skipped section
+9.8.3. Special Cases For Argument Expansion
