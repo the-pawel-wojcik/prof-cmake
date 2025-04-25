@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.30)
+
+get_cmake_property(vars VARIABLES)
+get_cmake_property(cache_vars CACHE_VARIABLES)
+get_cmake_property(commands COMMANDS)
+get_cmake_property(macros MACROS)
+get_cmake_property(components COMPONENTS)
+
+function(printList list)
+    foreach(var IN LISTS ${list})
+        message("\t${var}")
+    endforeach()
+endfunction()
+
+message("CMake GLOBAL properties")
+
+message("vars =")
+printList(vars)
+message("cache_vars =")
+printList(cache_vars)
+message("commands =")
+printList(commands)
+message("macros =")
+printList(macros)
+message("components =")
+printList(components)
