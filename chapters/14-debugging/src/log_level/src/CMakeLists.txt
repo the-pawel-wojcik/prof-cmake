@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.30)
+project(LogLevels LANGUAGES)
+
+# message(FATAL_ERROR "FATAL_ERROR")
+# message(SEND_ERROR "SEND_ERROR")
+message(WARNING "WARNING")
+message(AUTHOR_WARNING "AUTHOR_WARNING")
+message(DEPRECATION "DEPRECATION")
+message(NOTICE "NOTICE")
+message(STATUS "STATUS")
+message(VERBOSE "VERBOSE")
+message(DEBUG "DEBUG")
+message(TRACE "TRACE")
